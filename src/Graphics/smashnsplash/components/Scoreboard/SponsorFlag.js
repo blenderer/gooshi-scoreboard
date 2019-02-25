@@ -105,7 +105,7 @@ class SponsorFlag extends React.Component {
 const styles = {
   image: {
     position: 'absolute',
-    top: 0,
+    top: 13,
     width: 49,
     height: 54,
     transition: 'opacity 1.1s',

@@ -17,7 +17,7 @@ const styles = {
     textAlign: "center",
     color: "white",
     fontSize: 20,
-    bottom: 66,
+    top: 66,
     left: 0,
     right: 0
   },
@@ -129,12 +129,12 @@ class Scoreboard extends React.Component {
             name={player2.name}
             style={{ right: 293 }}
           />
-          {/* <SponsorFlag
+          <SponsorFlag
             sponsor={player1Assets.sponsor}
             country={player1Assets.country}
             character={player1Assets.character}
             style={{
-              left: 417
+              left: 218
             }}
           />
           <SponsorFlag
@@ -143,9 +143,9 @@ class Scoreboard extends React.Component {
             character={player2Assets.character}
             side="right"
             style={{
-              right: 417
+              right: 218
             }}
-          /> */}
+          />
         </div>
       </React.Fragment>
     );
