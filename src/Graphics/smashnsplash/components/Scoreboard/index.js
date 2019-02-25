@@ -12,20 +12,12 @@ import graphics from "../../scripts/graphics";
 import classNames from "classnames";
 
 const styles = {
-  name: {
-    top: 6,
-    width: 411,
-    textAlign: "center",
-    color: "white",
-    fontSize: 39,
-    position: "absolute"
-  },
   bracketPhase: {
     position: "absolute",
     textAlign: "center",
     color: "white",
     fontSize: 20,
-    bottom: 68,
+    bottom: 66,
     left: 0,
     right: 0
   },
@@ -117,27 +109,27 @@ class Scoreboard extends React.Component {
 
     return (
       <React.Fragment>
-        <GraphicImage src={`build${graphics.singlesBase}`} />
-        <GraphicImage
+        <GraphicImage src={`build${graphics.cams}`} />
+        {/* <GraphicImage
           className={leftClasses}
           src={`build${graphics.scoreLeftSingles}`}
         />
         <GraphicImage
           className={rightClasses}
           src={`build${graphics.scoreRightSingles}`}
-        />
+        /> */}
         <div className={classNames(infoClasses)}>
           <Tag
             sponsor={player1.sponsor}
             name={player1.name}
-            style={{ left: 2 }}
+            style={{ left: 293 }}
           />
           <Tag
             sponsor={player2.sponsor}
             name={player2.name}
-            style={{ right: 2 }}
+            style={{ right: 293 }}
           />
-          <SponsorFlag
+          {/* <SponsorFlag
             sponsor={player1Assets.sponsor}
             country={player1Assets.country}
             character={player1Assets.character}
@@ -153,7 +145,7 @@ class Scoreboard extends React.Component {
             style={{
               right: 417
             }}
-          />
+          /> */}
         </div>
       </React.Fragment>
     );
@@ -242,8 +234,7 @@ class Scoreboard extends React.Component {
   renderBo3() {
     return (
       <React.Fragment>
-        <GraphicImage src={`build${graphics.scoreLeftbo3}`} />
-        <GraphicImage src={`build${graphics.scoreRightbo3}`} />
+        <GraphicImage src={`build${graphics.backer3}`} />
       </React.Fragment>
     );
   }
@@ -251,8 +242,7 @@ class Scoreboard extends React.Component {
   renderBo5() {
     return (
       <React.Fragment>
-        <GraphicImage src={`build${graphics.scoreLeftbo5}`} />
-        <GraphicImage src={`build${graphics.scoreRightbo5}`} />
+        <GraphicImage src={`build${graphics.backer5}`} />
       </React.Fragment>
     );
   }
@@ -260,24 +250,16 @@ class Scoreboard extends React.Component {
   renderScore() {
     const { scoreboard } = this.props;
 
-    const left = scoreboard.set.score.team1.filter(point => !!point);
-    const right = scoreboard.set.score.team2.filter(point => !!point);
+    const left = scoreboard.set.score.team1.filter(point => !!point).length;
+    const right = scoreboard.set.score.team2.filter(point => !!point).length;
 
-    const leftScore = left.map((point, index) => (
-      <GraphicImage
-        style={{ left: index * -18 }}
-        key={`p1-${index}`}
-        src={`build${graphics.scoreLeftFill}`}
-      />
-    ));
+    const leftScore = left && (
+      <GraphicImage key={`p1-${left}`} src={`${graphics[`left${left}`]}`} />
+    );
 
-    const rightScore = right.map((point, index) => (
-      <GraphicImage
-        style={{ left: "auto", right: index * -18 }}
-        key={`p2-${index}`}
-        src={`build${graphics.scoreRightFill}`}
-      />
-    ));
+    const rightScore = right && (
+      <GraphicImage key={`p2-${right}`} src={`${graphics[`right${right}`]}`} />
+    );
 
     return (
       <React.Fragment>
@@ -306,15 +288,15 @@ class Scoreboard extends React.Component {
 
     return (
       <Graphic enabled={enabled}>
-        {scoreboard.format === "singles"
-          ? this.renderSingles()
-          : this.renderDoubles()}
         <div style={{ height: "100%" }} className={classNames(infoClasses)}>
           {scoreboard.set.format === "bo3"
             ? this.renderBo3()
             : this.renderBo5()}
           {this.renderScore()}
           {this.renderBracketPhase()}
+          {scoreboard.format === "singles"
+            ? this.renderSingles()
+            : this.renderDoubles()}
         </div>
       </Graphic>
     );
