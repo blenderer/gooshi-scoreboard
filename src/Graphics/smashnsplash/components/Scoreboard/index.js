@@ -231,10 +231,24 @@ class Scoreboard extends React.Component {
     );
   }
 
+  renderBG() {
+    return (
+      <React.Fragment>
+        <GraphicImage src={`build${graphics.backer}`} />
+        <GraphicImage src={`${graphics.p1c}`} />
+        <GraphicImage src={`build${graphics.p1n}`} />
+        <GraphicImage src={`build${graphics.p1s}`} />
+        <GraphicImage src={`${graphics.p2c}`} />
+        <GraphicImage src={`build${graphics.p2n}`} />
+        <GraphicImage src={`build${graphics.p2s}`} />
+      </React.Fragment>
+    );
+  }
+
   renderBo3() {
     return (
       <React.Fragment>
-        <GraphicImage src={`build${graphics.backer3}`} />
+        {/* <GraphicImage src={`build${graphics.backer3}`} /> */}
       </React.Fragment>
     );
   }
@@ -242,7 +256,7 @@ class Scoreboard extends React.Component {
   renderBo5() {
     return (
       <React.Fragment>
-        <GraphicImage src={`build${graphics.backer5}`} />
+        {/* <GraphicImage src={`build${graphics.backer5}`} /> */}
       </React.Fragment>
     );
   }
@@ -289,14 +303,13 @@ class Scoreboard extends React.Component {
     return (
       <Graphic enabled={enabled}>
         <div style={{ height: "100%" }} className={classNames(infoClasses)}>
+          {this.renderBG()}
           {scoreboard.set.format === "bo3"
             ? this.renderBo3()
             : this.renderBo5()}
           {this.renderScore()}
           {this.renderBracketPhase()}
-          {scoreboard.format === "singles"
-            ? this.renderSingles()
-            : this.renderDoubles()}
+          {scoreboard.format === "singles" ? this.renderSingles() : null}
         </div>
       </Graphic>
     );

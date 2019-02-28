@@ -21,11 +21,11 @@ class Tag extends React.Component {
 
 const styles = {
 	name: {
-		top: 11,
+		top: 14,
 		width: 229,
 		textAlign: 'center',
 		color: 'white',
-		fontSize: 34,
+		fontSize: 27,
 		position: 'absolute'
 	},
 	sponsor: {

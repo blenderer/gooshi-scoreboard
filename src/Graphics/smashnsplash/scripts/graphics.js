@@ -20,14 +20,24 @@ import scoreRightDoubles from '../graphics/Overlays/SNS4_Scoreboard-Doubles-Righ
 import scoreLeftSingles from '../graphics/Overlays/SNS4_Scoreboard-Singles-Left.png';
 import scoreRightSingles from '../graphics/Overlays/SNS4_Scoreboard-Singles-Right.png';
 import cams from '../graphics/Overlays/vtt/cams.png';
-import backer3 from '../graphics/Overlays/vtt/vistatech those in game v2 bo3.png';
-import backer5 from '../graphics/Overlays/vtt/vistatech those in game v2 bo5.png';
+import backer from '../graphics/Overlays/vtt/backer.png';
 import left1 from '../graphics/Overlays/vtt/p1 1 win.png';
 import left2 from '../graphics/Overlays/vtt/p1 2 win.png';
 import left3 from '../graphics/Overlays/vtt/p1 3 win.png';
 import right1 from '../graphics/Overlays/vtt/p1 1 win.png';
 import right2 from '../graphics/Overlays/vtt/p2 2 win.png';
 import right3 from '../graphics/Overlays/vtt/p2 3 win.png';
+
+import p1c from '../graphics/Overlays/vtt/player1 character.png';
+import p2c from '../graphics/Overlays/vtt/player2 character.png';
+
+import p1n from '../graphics/Overlays/vtt/player1 name.png';
+import p2n from '../graphics/Overlays/vtt/player2 name.png';
+
+import p1s from '../graphics/Overlays/vtt/player1 sponsor.png';
+import p2s from '../graphics/Overlays/vtt/player2 sponsor.png';
+
+// player1 character
 
 
 
@@ -60,6 +70,11 @@ export default {
   right2,
   right3,
   cams,
-  backer3,
-  backer5,
+  backer,
+  p1c,
+  p2c,
+  p1n,
+  p2n,
+  p1s,
+  p2s,
 };

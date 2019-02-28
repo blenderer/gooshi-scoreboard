@@ -77,7 +77,7 @@ class SponsorFlag extends React.Component {
 
     };
 
-    setInterval(this.interval, 7000);
+    // setInterval(this.interval, 7000);
   }
 
 	render() {
