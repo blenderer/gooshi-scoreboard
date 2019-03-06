@@ -49,7 +49,21 @@ const styles = {
   activeInformation: {
     opacity: 1,
     transition: "opacity 1s"
-  }
+  },
+  character: {
+    position: "absolute",
+    width: 59,
+    height: 59,
+    overflow: "hidden",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    top: 9,
+  },
+  charImage: {
+    maxHeight: '100%',
+    maxWidth: '100%',
+  },
 };
 
 const isOnScoreBoard = sceneName => {
@@ -134,7 +148,7 @@ class Scoreboard extends React.Component {
             country={player1Assets.country}
             character={player1Assets.character}
             style={{
-              left: 218
+              left: 530
             }}
           />
           <SponsorFlag
@@ -143,9 +157,15 @@ class Scoreboard extends React.Component {
             character={player2Assets.character}
             side="right"
             style={{
-              right: 218
+              right: 535
             }}
           />
+          <div className={classes.character} style={{left: 203}}>
+            <img className={classes.charImage} src={player1Assets.character} alt="" />
+          </div>
+          <div className={classes.character} style={{right: 217}}>
+            <img className={classes.charImage} src={player2Assets.character} alt="" />
+          </div>
         </div>
       </React.Fragment>
     );

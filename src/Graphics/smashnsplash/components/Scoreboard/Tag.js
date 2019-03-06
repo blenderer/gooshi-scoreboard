@@ -21,7 +21,7 @@ class Tag extends React.Component {
 
 const styles = {
 	name: {
-		top: 14,
+		top: 15,
 		width: 229,
 		textAlign: 'center',
 		color: 'white',
