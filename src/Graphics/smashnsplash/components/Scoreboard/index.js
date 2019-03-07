@@ -160,10 +160,10 @@ class Scoreboard extends React.Component {
               right: 535
             }}
           />
-          <div className={classes.character} style={{left: 203}}>
+          <div className={classes.character} style={{left: 205}}>
             <img className={classes.charImage} src={player1Assets.character} alt="" />
           </div>
-          <div className={classes.character} style={{right: 217}}>
+          <div className={classes.character} style={{right: 206}}>
             <img className={classes.charImage} src={player2Assets.character} alt="" />
           </div>
         </div>
@@ -255,12 +255,6 @@ class Scoreboard extends React.Component {
     return (
       <React.Fragment>
         <GraphicImage src={`build${graphics.backer}`} />
-        <GraphicImage src={`${graphics.p1c}`} />
-        <GraphicImage src={`build${graphics.p1n}`} />
-        <GraphicImage src={`build${graphics.p1s}`} />
-        <GraphicImage src={`${graphics.p2c}`} />
-        <GraphicImage src={`build${graphics.p2n}`} />
-        <GraphicImage src={`build${graphics.p2s}`} />
       </React.Fragment>
     );
   }
@@ -268,7 +262,7 @@ class Scoreboard extends React.Component {
   renderBo3() {
     return (
       <React.Fragment>
-        {/* <GraphicImage src={`build${graphics.backer3}`} /> */}
+        <GraphicImage src={`build${graphics.p1wins}`} />
       </React.Fragment>
     );
   }
@@ -276,7 +270,7 @@ class Scoreboard extends React.Component {
   renderBo5() {
     return (
       <React.Fragment>
-        {/* <GraphicImage src={`build${graphics.backer5}`} /> */}
+        <GraphicImage src={`build${graphics.bo5}`} />
       </React.Fragment>
     );
   }
@@ -323,7 +317,6 @@ class Scoreboard extends React.Component {
     return (
       <Graphic enabled={enabled}>
         <div style={{ height: "100%" }} className={classNames(infoClasses)}>
-          {this.renderBG()}
           {scoreboard.set.format === "bo3"
             ? this.renderBo3()
             : this.renderBo5()}

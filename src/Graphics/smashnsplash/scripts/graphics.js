@@ -1,9 +1,9 @@
 import doublesBase from '../graphics/Overlays/SNS4-Gameplay-Doubles-Base (1).png';
 import singlesBase from '../graphics/Overlays/SNS4-Gameplay-Singles-Base (1).png';
 import cam1 from '../graphics/Overlays/SNS4-GG_2-Cam-1.png';
-import cam2 from '../graphics/Overlays/SNS4-GG_2-Cam-2.png';
-import cam from '../graphics/Overlays/SNS4-GG_3-Cam.png';
-import commentary from '../graphics/Overlays/SNS4-GG_Commentary.png';
+import cam2 from '../graphics/Overlays/vtt/vistatech those 2 cam.png';
+import cam from '../graphics/Overlays/vtt/vistatech those 3 cam.png';
+import commentary from '../graphics/Overlays/vtt/commentator bar.png';
 import crowd from '../graphics/Overlays/SNS4-GG_Crowd.png';
 import ggCamBase from '../graphics/Overlays/SNS4-GG_Player-Cam-Base.png';
 import ggCamBo3 from '../graphics/Overlays/SNS4-GG_Player-Cam-Bo3.png';
@@ -28,6 +28,9 @@ import right1 from '../graphics/Overlays/vtt/p1 1 win.png';
 import right2 from '../graphics/Overlays/vtt/p2 2 win.png';
 import right3 from '../graphics/Overlays/vtt/p2 3 win.png';
 
+import bo3 from '../graphics/Overlays/vtt/vistatech those in game v2 bo3.png';
+import bo5 from '../graphics/Overlays/vtt/vistatech those in game v2 bo5.png';
+
 import p1c from '../graphics/Overlays/vtt/player1 character.png';
 import p2c from '../graphics/Overlays/vtt/player2 character.png';
 
@@ -36,6 +39,9 @@ import p2n from '../graphics/Overlays/vtt/player2 name.png';
 
 import p1s from '../graphics/Overlays/vtt/player1 sponsor.png';
 import p2s from '../graphics/Overlays/vtt/player2 sponsor.png';
+
+import p1wins from '../graphics/Overlays/vtt/player1 wins.png';
+import p2wins from '../graphics/Overlays/vtt/player1 wins.png';
 
 // player1 character
 
@@ -77,4 +83,6 @@ export default {
   p2n,
   p1s,
   p2s,
+  p1wins,
+  p2wins,
 };

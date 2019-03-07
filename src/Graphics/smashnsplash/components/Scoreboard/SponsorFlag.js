@@ -14,11 +14,11 @@ class SponsorFlag extends React.Component {
     const { country, sponsor, character } = props;
     const images = [];
 
-    images.push(country);
+    // images.push(country);
 
     images.push(sponsor);
 
-    images.push(character);
+    // images.push(character);
 
     return { images };
   }
