@@ -9,7 +9,7 @@ const styles = {};
 
 class SideSideCamera extends PureComponent {
   render() {
-    const { classes, enabled } = this.props;
+    const { enabled } = this.props;
 
     return (
       <Graphic enabled={enabled}>
